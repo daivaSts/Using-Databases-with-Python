@@ -53,7 +53,7 @@ if ( len(source_file) < 1 ) :
 
 '''
 The lookup function returns the entry's string or integer tag content
-if the key tag content mathes to provided string
+if the key tag content matches to the provided string
 Entry sample:
 <key>Track ID</key><integer>369</integer>
 <key>Name</key><string>Another One Bites The Dust</string>
@@ -76,7 +76,7 @@ all_list = stuff.findall('dict/dict/dict')
 
 '''
 Iterates over the list created by parsing the source xml file and adds the extracted
-data to the apropriate tables of the database
+data to the appropriate tables of the database.
 '''
 for entry in all_list:
     if ( lookup(entry, 'Track ID') is None ) : continue
